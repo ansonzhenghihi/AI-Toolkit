@@ -45,15 +45,16 @@ dsh plugin --profile web add <本目录的绝对路径>
 
 本插件是 AI-Toolkit 仓库的子目录，pnpm 不能直接安装仓库内的子目录，所以先克隆再指向本地路径：
 
+| 平台 | 仓库地址 |
+| --- | --- |
+| GitHub | https://github.com/ansonzhenghihi/AI-Toolkit |
+| Gitee | https://gitee.com/anson654321/AI-Toolkit |
+
 ```sh
-git clone <仓库地址> ai-toolkit
+git clone https://github.com/ansonzhenghihi/AI-Toolkit.git ai-toolkit
+# 国内网络可改用 Gitee 镜像
+# git clone https://gitee.com/anson654321/AI-Toolkit.git ai-toolkit
 dsh plugin --profile web add <克隆后的路径>/dsh-balance-chip
-```
-
-如果你把它拆成独立仓库，也可以直接：
-
-```sh
-dsh plugin --profile web add git+https://github.com/<your-account>/dsh-balance-chip.git
 ```
 
 ### 卸载
@@ -62,7 +63,7 @@ dsh plugin --profile web add git+https://github.com/<your-account>/dsh-balance-c
 
 ## 隐私与安全
 
-- **本仓库不包含任何账号信息**：没有账号 ID、UID、手机号/邮箱、令牌、Cookie、余额截图、私有链接，也没有本机绝对路径；README 与代码中的地址均为占位符。
+- **本仓库不包含任何账号信息**：没有账号 ID、UID、手机号/邮箱、令牌、Cookie、余额截图、私有链接，也没有本机绝对路径；README 中的地址仅为公开仓库链接。
 - 余额只在本机浏览器渲染层显示；读取经由 DSH Host 已有的 `account` 能力转发到 DeepSeek 官方平台接口，**插件本身不接触凭据、不写入任何文件**。
 - 读取失败时只在浏览器控制台输出错误类型与接口名，不输出余额数值；插件不采集、不上报，也没有任何第三方请求。
 - 扫描或审核代码时可以直接看 `client.js`：唯一的网络调用是 `ctx.remote.account.getBalance()`。
