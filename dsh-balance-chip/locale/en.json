@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Account balance chip",
+    "description": "Shows the DeepSeek account recharge and bonus balance next to the composer model selector, with a refresh button. Account balance only for now.",
+    "detail": "docs/DETAIL.md"
+  }
+}

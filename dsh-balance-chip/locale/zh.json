@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "账户余额徽标",
+    "description": "在对话输入框的模型选择器旁显示 DeepSeek 账户的充值余额与赠送余额，并提供刷新按钮。目前仅支持账户余额。",
+    "detail": "docs/DETAIL.md"
+  }
+}
